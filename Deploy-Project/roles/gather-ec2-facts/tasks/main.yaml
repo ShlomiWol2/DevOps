@@ -5,7 +5,7 @@
     #aws_secret_key: "{{sec_key}}"
     region: "eu-central-1"
     filters:
-      "tag:Deploy-SH": "SO"
+      "tag:Deploy-SH": "SH-SO"
   register: so_instances
 
 # Adding the instances
