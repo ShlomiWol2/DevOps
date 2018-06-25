@@ -1,0 +1,6 @@
+############# My Test Deploy ################
+
+- hosts: local
+  roles:
+     - gather-ec2-facts
+  tags: "s3_gather"
