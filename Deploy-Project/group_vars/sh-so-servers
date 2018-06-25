@@ -1,5 +1,5 @@
-ansible_user: "{{ public_user }}"
-ansible_password: "{{ public_pass }}"
+ansible_user: "{{ so_user }}"
+ansible_password: "{{ so_pass }}"
 ansible_port: 5986
 ansible_connection: winrm
 ansible_winrm_transport: ntlm
