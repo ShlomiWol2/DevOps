@@ -7,5 +7,5 @@
 
 - hosts: sh-so-servers
   roles:
-    - deploy-win
+    - download-from-s3
   tags: so-servers
