@@ -9,7 +9,7 @@
   register: so_instances
 
 # Adding the instances
-- name: Adding branch 1 web public
+- name: Adding sso instances
   add_host:
         name: "{{ item.private_ip_address }}"
         groups: 'sh-so-servers'
