@@ -1,8 +1,8 @@
 # Getting all the instances
 - name: EC2 facts SSO servers.
   ec2_remote_facts:
-    aws_access_key: "{{access_key}}"
-    aws_secret_key: "{{sec_key}}"
+    #aws_access_key: "{{access_key}}"
+    #aws_secret_key: "{{sec_key}}"
     region: "eu-central-1"
     filters:
       "tag:Deploy-SH": "SO"
