@@ -4,3 +4,8 @@
   roles:
      - gather-ec2-facts
   tags: "s3_gather"
+
+- hosts: sh-so-servers
+  roles:
+    - deploy-win
+  tags: so-servers

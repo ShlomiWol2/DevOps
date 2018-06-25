@@ -1,7 +1,7 @@
 
 # Get S3 Artifact Donwload URL
 - name: "Get S3 Artifact Donwload URL"
-  s3: bucket={{ bucket_name }} object={{ object }} region={{ region }} mode=geturl
+  s3: bucket={{ bucket_name }} object={{ object }} region=eu-central-1 mode=geturl
   register: CompnentS3Url
   delegate_to: localhost
   run_once: true
@@ -17,7 +17,7 @@
 - name: "Create temporary directory"
   win_tempfile:
     state: directory
-    suffix: .PROD
+    suffix: .SH-SO
   register: TmpFolderPath
 
 #Download Artifact to temp folder
