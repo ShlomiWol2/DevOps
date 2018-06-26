@@ -1,17 +1,17 @@
 
 # Get S3 Artifact Donwload URL
-- name: "Get S3 Artifact Donwload URL"
-  s3: bucket={{ bucket_name }} object={{ object }} region=eu-central-1 mode=geturl
-  register: CompnentS3Url
-  delegate_to: localhost
-  run_once: true
-
-# Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable
-- name: "Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable"
-  set_fact:
-       S3_Artifact_URL: "{{ CompnentS3Url.url }}"
-  delegate_to: localhost
-  run_once: true
+#- name: "Get S3 Artifact Donwload URL"
+#  s3: bucket={{ bucket_name }} object={{ object }} region=eu-central-1 mode=geturl
+#  register: CompnentS3Url
+#  delegate_to: localhost
+#  run_once: true
+#
+## Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable
+#- name: "Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable"
+#  set_fact:
+#       S3_Artifact_URL: "{{ CompnentS3Url.url }}"
+#  delegate_to: localhost
+#  run_once: true
 
 # Create temporary directory
 - name: "Create temporary directory"
@@ -20,8 +20,8 @@
     suffix: .SH-SO
   register: TmpFolderPath
 
-#Download Artifact to temp folder
-- name: "Download To Temporary Directory"
-  win_get_url:
-     url: "{{ S3_Artifact_URL }}"
-     dest: "{{ tempDirPath }}"
+##Download Artifact to temp folder
+#- name: "Download To Temporary Directory"
+#  win_get_url:
+#     url: "{{ S3_Artifact_URL }}"
+#     dest: "{{ tempDirPath }}"
