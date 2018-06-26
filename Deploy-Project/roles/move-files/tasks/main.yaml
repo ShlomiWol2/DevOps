@@ -1,5 +1,5 @@
 # Getting all the instances
-- name: Backuping last version
+- name: "Backuping last version"
   win_robocopy:
     src: "{{backup_source_folder}}"
     dest: "{{backup_destination_folder}}"
@@ -7,11 +7,17 @@
     purge: true
     flags: '/E'
 
-# Getting all the instances
-- name: Copy to {{destination_folder}}
-  win_robocopy:
+- name: "Unzip Code.zip"
+  win_unzip:
     src: "{{source_folder}}"
     dest: "{{destination_folder}}"
-    recurse: true
-    purge: true
-    flags: '/E'
+#    creates: "{{publish_dest}}"
+
+# Getting all the instances
+#- name: Copy to {{destination_folder}}
+#  win_robocopy:
+#    src: "{{source_folder}}"
+#    dest: "{{destination_folder}}"
+#    recurse: true
+#    purge: true
+#    flags: '/E'
