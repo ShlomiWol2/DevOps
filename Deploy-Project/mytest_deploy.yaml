@@ -9,4 +9,5 @@
 - hosts: sh-so-servers
   roles:
     - download-from-s3
+    - move-files
   tags: so-servers

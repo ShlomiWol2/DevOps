@@ -1,0 +1,4 @@
+backup_source_folder: "C:\\SO-APP"
+backup_destination_folder: "C:\\Backup\\{{date}}"
+destination_folder: "C:\\SO-APP"
+source_folder: "C:\\temp\\Code.zip"
