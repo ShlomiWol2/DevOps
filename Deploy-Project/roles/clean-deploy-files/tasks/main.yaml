@@ -1,5 +1,5 @@
 # Getting all the instances
 - name: Removing temp folder
   win_file:
-    path: "C:\temp"
+    path: "C:\\temp"
     state: absent
