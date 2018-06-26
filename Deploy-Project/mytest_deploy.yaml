@@ -3,11 +3,11 @@
 - hosts: local
   roles:
      - gather-ec2-facts
-#     - download-from-s3
   tags: "s3_gather"
 
 - hosts: sh-so-servers
   roles:
     - download-from-s3
     - move-files
-  tags: so-servers
+    - clean-deploy-files
+  tags: "so-servers-deploy"
