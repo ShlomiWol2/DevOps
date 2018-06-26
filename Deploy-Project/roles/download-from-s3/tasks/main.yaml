@@ -20,7 +20,7 @@
 #    suffix: .SH-SO
 #  register: TmpFolderPath
 
-- name: Create temp dir
+- name: "Create Temp dir"
   win_file:
     path: "C:/temp/"
     state: directory
