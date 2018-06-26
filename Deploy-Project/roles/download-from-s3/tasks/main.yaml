@@ -6,22 +6,22 @@
   delegate_to: localhost
   run_once: true
 
-## Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable
-- name: "Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable"
-  set_fact:
-       S3_Artifact_URL: "{{ CompnentS3Url.url }}"
-  delegate_to: localhost
-  run_once: true
-
-## Create temporary directory
-- name: "Create temporary directory"
-  win_tempfile:
-    state: directory
-    suffix: .SH-SO
-  register: TmpFolderPath
-
-##Download Artifact to temp folder
-- name: "Download To Temporary Directory"
-  win_get_url:
-     url: "{{ S3_Artifact_URL }}"
-     dest: "{{ tempDirPath }}"
+### Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable
+#- name: "Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable"
+#  set_fact:
+#       S3_Artifact_URL: "{{ CompnentS3Url.url }}"
+#  delegate_to: localhost
+#  run_once: true
+#
+### Create temporary directory
+#- name: "Create temporary directory"
+#  win_tempfile:
+#    state: directory
+#    suffix: .SH-SO
+#  register: TmpFolderPath
+#
+###Download Artifact to temp folder
+#- name: "Download To Temporary Directory"
+#  win_get_url:
+#     url: "{{ S3_Artifact_URL }}"
+#     dest: "{{ tempDirPath }}"
