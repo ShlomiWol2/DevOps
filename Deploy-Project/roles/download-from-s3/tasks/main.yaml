@@ -2,6 +2,8 @@
 ## Get S3 Artifact Donwload URL
 - name: "Get S3 Artifact Donwload URL"
   s3: bucket={{ bucket_name }} object={{ object }} region=eu-central-1 mode=geturl
+  aws_access_key: "{{access_key}}"
+  aws_secret_key: "{{sec_key}}"
   register: CompnentS3Url
   delegate_to: localhost
   run_once: true
