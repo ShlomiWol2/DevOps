@@ -3,7 +3,7 @@
 - name: "Get S3 Artifact Donwload URL"
   s3: bucket={{ bucket_name }} object={{ object }} region=eu-central-1 mode=geturl
   register: CompnentS3Url
-  delegate_to: localhost
+#  delegate_to: localhost
   run_once: true
 
 ### Store AWS S3 Artifact Download URL to S3_Artifact_URL Variable
