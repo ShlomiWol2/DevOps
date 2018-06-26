@@ -14,14 +14,19 @@
   run_once: true
 
 ## Create temporary directory
-- name: "Create temporary directory"
-  win_tempfile:
+#- name: "Create temporary directory"
+#  win_tempfile:
+#    state: directory
+#    suffix: .SH-SO
+#  register: TmpFolderPath
+
+- name: Create temp dir
+  win_file:
+    path: "C:/temp/"
     state: directory
-    suffix: .SH-SO
-  register: TmpFolderPath
 
 ##Download Artifact to temp folder
 - name: "Download To Temporary Directory"
   win_get_url:
      url: "{{ S3_Artifact_URL }}"
-     dest: "{{ tempDirPath }}"
+     dest: "C:/temp/Code.zip"
